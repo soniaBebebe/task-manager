@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1 class="app-title">Kanban Task Manager</h1>
+        <p class="app-subtitle">Drag tasks between columns</p>
+    </header>
+
+    <main class="app-main">
+        <section class="panel">
+            <h2 class="panel__title">New task</h2>
+            <form id="task-form" class="task-form">
+                <div class="task-form__field">
+                    <label for="task-title">Title</label>
+                    <input type="text" id="task-title" name="title" placeholder="For example, sverstat header" required>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
