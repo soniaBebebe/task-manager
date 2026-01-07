@@ -1,0 +1,96 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+:root{
+    --bg: #020617;
+    --bg-panel: #0f172a;
+    --bg-column: #020617;
+    --border-subtle: #1f2937;
+    --accent: #22c55e;
+    --accent-soft: rgba(34,197,94,0.1);
+    --accent-strong: rgba(34,197,94, 0.3);
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+    --task-bg: #111827;
+    --task-border: #1f2937;
+    --danger: #ef4444;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --shadow-soft: 0 18px 40px rgba(15,23,42,0.9);
+    --transition: 150ms ease;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #1f2937, #020617 60%);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header{
+    padding: 1.5rem 1.5rem 1rem;
+}
+.app-title{
+    margin: 0;
+    font-size: 1.7rem;
+    letter-spacing: 0.03em;
+}
+.app-subtitle{
+    margin: 0.25rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+.app-main{
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+    padding: 0 1.5rem 1.5rem;
+    flex-wrap: wrap;
+}
+
+.panel{
+    flex: 0 0 280px;
+    max-width: 320px;
+    background: linear-gradient(145deg, #020617, #0b1120);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.1rem;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+}
+.panel__title{
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+}
+
+.task-form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.task-form__field{
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+}
+.task-form label{
+    color: var(--text-muted);
+}
+.task-form input, .task-form textarea, .task-form select{
+    background: #020617;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(55,65,81, 0.9);
+    padding: 0.45rem 0.6rem;
+    color: var(--text-main);
+    font: inherit;
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+.task-form input::placeholder, .task-form textarea::placeholder{
+    color: #7986a0;
+}
